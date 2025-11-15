@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinBoard - Financial Data Exploration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard-styles.css">
+</head>
+<body>
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/logo.svg" alt="FinBoard" class="logo-icon">
+                <h1 class="logo-text">FinBoard</h1>
+            </div>
+
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <img src="assets/icon-search.svg" alt="Search" class="search-icon">
+                    <input type="text" class="search-input" placeholder="Search cards...">
+                </div>
+                <button class="portfolio-button">
+                    <img src="assets/icon-portfolio.svg" alt="Portfolio" class="button-icon">
+                    My Portfolio
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="cards-grid">
+            <!-- Column 1 -->
+            <div class="cards-column">
+                <!-- News Card 1 -->
+                <article class="news-card">
+                    <div class="news-image-container">
+                        <img src="assets/news1.png" alt="Federal Reserve" class="news-image">
+                        <span class="badge badge-markets">Markets</span>
+                        <div class="card-actions">
+                            <button class="action-button action-bookmark">
+                                <img src="assets/icon-bookmark.svg" alt="Bookmark">
+                            </button>
+                            <button class="action-button action-share">
+                                <img src="assets/icon-share.svg" alt="Share">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Federal Reserve Signals Potential Rate Changes in Q4</h3>
+                        <p class="news-description">The Federal Reserve indicated possible adjustments to interest rates as inflation metrics show signs of stabilization. Markets react positively to the measured approach.</p>
+                        <div class="news-meta">
+                            <span class="news-source">Financial Times</span>
+                            <div class="news-time">
+                                <img src="assets/icon-clock.svg" alt="Clock" class="time-icon">
+                                <span>2h ago</span>
+                            </div>
+                        </div>
+                        <button class="read-more-button">
+                            <img src="assets/icon-arrow.svg" alt="Arrow" class="read-more-icon">
+                            Read More
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Stock Card - TSLA -->
+                <article class="stock-card">
+                    <div class="stock-header">
+                        <div class="stock-info">
+                            <h3 class="stock-symbol">TSLA</h3>
+                            <span class="badge badge-negative">
+                                <img src="assets/icon-down.svg" alt="Down" class="badge-icon">
+                                -1.30%
+                            </span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="action-button action-bookmark">
+                                <img src="assets/icon-bookmark.svg" alt="Bookmark">
+                            </button>
+                            <button class="action-button action-share">
+                                <img src="assets/icon-share.svg" alt="Share">
+                            </button>
+                        </div>
+                    </div>
+                    <p class="stock-name">Tesla Inc.</p>
+                    <div class="stock-price-info">
+                        <div class="stock-price">$242.60</div>
+                        <div class="stock-change negative">-3.20 today</div>
+                    </div>
+                    <div class="stock-chart" data-stock="TSLA">
+                        <div class="chart-y-axis">
+                            <div class="y-axis-labels"></div>
+                        </div>
+                        <div class="chart-area">
+                            <img src="assets/chart-tsla.svg" alt="TSLA Chart" class="chart-image">
+                            <div class="chart-tooltip">
+                                <div class="tooltip-content">
+                                    <span class="tooltip-price">$242.60</span>
+                                    <span class="tooltip-date">Mon, 10:00 AM</span>
+                                </div>
+                                <div class="tooltip-pointer"></div>
+                            </div>
+                            <div class="chart-crosshair"></div>
+                        </div>
+                        <div class="chart-x-axis">
+                            <div class="x-axis-labels"></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="cards-column">
+                <!-- Stock Card - AAPL -->
+                <article class="stock-card">
+                    <div class="stock-header">
+                        <div class="stock-info">
+                            <h3 class="stock-symbol">AAPL</h3>
+                            <span class="badge badge-positive">
+                                <img src="assets/icon-up.svg" alt="Up" class="badge-icon">
+                                1.33%
+                            </span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="action-button action-bookmark">
+                                <img src="assets/icon-bookmark.svg" alt="Bookmark">
+                            </button>
+                            <button class="action-button action-share">
+                                <img src="assets/icon-share.svg" alt="Share">
+                            </button>
+                        </div>
+                    </div>
+                    <p class="stock-name">Apple Inc.</p>
+                    <div class="stock-price-info">
+                        <div class="stock-price">$178.50</div>
+                        <div class="stock-change positive">+2.35 today</div>
+                    </div>
+                    <div class="stock-chart" data-stock="AAPL">
+                        <div class="chart-y-axis">
+                            <div class="y-axis-labels"></div>
+                        </div>
+                        <div class="chart-area">
+                            <img src="assets/chart-aapl.svg" alt="AAPL Chart" class="chart-image">
+                            <div class="chart-tooltip">
+                                <div class="tooltip-content">
+                                    <span class="tooltip-price">$178.50</span>
+                                    <span class="tooltip-date">Mon, 10:00 AM</span>
+                                </div>
+                                <div class="tooltip-pointer"></div>
+                            </div>
+                            <div class="chart-crosshair"></div>
+                        </div>
+                        <div class="chart-x-axis">
+                            <div class="x-axis-labels"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- News Card 2 -->
+                <article class="news-card">
+                    <div class="news-image-container">
+                        <img src="assets/news2.png" alt="Supply Chain" class="news-image">
+                        <span class="badge badge-economy">Economy</span>
+                        <div class="card-actions">
+                            <button class="action-button action-bookmark">
+                                <img src="assets/icon-bookmark.svg" alt="Bookmark">
+                            </button>
+                            <button class="action-button action-share">
+                                <img src="assets/icon-share.svg" alt="Share">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Global Supply Chain Disruptions Ease</h3>
+                        <p class="news-description">International shipping costs decline as port congestion improves worldwide. Companies report better inventory management and reduced lead times.</p>
+                        <div class="news-meta">
+                            <span class="news-source">Reuters</span>
+                            <div class="news-time">
+                                <img src="assets/icon-clock.svg" alt="Clock" class="time-icon">
+                                <span>8h ago</span>
+                            </div>
+                        </div>
+                        <button class="read-more-button">
+                            <img src="assets/icon-arrow.svg" alt="Arrow" class="read-more-icon">
+                            Read More
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="cards-column">
+                <!-- News Card 3 -->
+                <article class="news-card">
+                    <div class="news-image-container">
+                        <img src="assets/news3.png" alt="Tech Stocks" class="news-image">
+                        <span class="badge badge-technology">Technology</span>
+                        <div class="card-actions">
+                            <button class="action-button action-bookmark">
+                                <img src="assets/icon-bookmark.svg" alt="Bookmark">
+                            </button>
+                            <button class="action-button action-share">
+                                <img src="assets/icon-share.svg" alt="Share">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="news-content">
+                        <h3 class="news-title">Tech Stocks Rally on Strong Earnings Reports</h3>
+                        <p class="news-description">Major technology companies exceeded earnings expectations, driving a surge in tech-heavy indices. Analysts point to AI investments as a key growth driver.</p>
+                        <div class="news-meta">
+                            <span class="news-source">Bloomberg</span>
+                            <div class="news-time">
+                                <img src="assets/icon-clock.svg" alt="Clock" class="time-icon">
+                                <span>4h ago</span>
+                            </div>
+                        </div>
+                        <button class="read-more-button">
+                            <img src="assets/icon-arrow.svg" alt="Arrow" class="read-more-icon">
+                            Read More
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Stock Card - MSFT -->
+                <article class="stock-card">
+                    <div class="stock-header">
+                        <div class="stock-info">
+                            <h3 class="stock-symbol">MSFT</h3>
+                            <span class="badge badge-positive">
+                                <img src="assets/icon-up.svg" alt="Up" class="badge-icon">
+                                1.45%
+                            </span>
+                        </div>
+                        <div class="card-actions">
+                            <button class="action-button action-bookmark">
+                                <img src="assets/icon-bookmark.svg" alt="Bookmark">
+                            </button>
+                            <button class="action-button action-share">
+                                <img src="assets/icon-share.svg" alt="Share">
+                            </button>
+                        </div>
+                    </div>
+                    <p class="stock-name">Microsoft Corporation</p>
+                    <div class="stock-price-info">
+                        <div class="stock-price">$405.20</div>
+                        <div class="stock-change positive">+5.80 today</div>
+                    </div>
+                    <div class="stock-chart" data-stock="MSFT">
+                        <div class="chart-y-axis">
+                            <div class="y-axis-labels"></div>
+                        </div>
+                        <div class="chart-area">
+                            <img src="assets/chart-msft.svg" alt="MSFT Chart" class="chart-image">
+                            <div class="chart-tooltip">
+                                <div class="tooltip-content">
+                                    <span class="tooltip-price">$405.20</span>
+                                    <span class="tooltip-date">Mon, 10:00 AM</span>
+                                </div>
+                                <div class="tooltip-pointer"></div>
+                            </div>
+                            <div class="chart-crosshair"></div>
+                        </div>
+                        <div class="chart-x-axis">
+                            <div class="x-axis-labels"></div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <!-- History Sidebar -->
+    <aside class="history-sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-title">
+                <svg class="sparkle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 3v18m9-9H3m15.36-6.36L5.64 18.36m12.72 0L5.64 5.64"/>
+                </svg>
+                <h2>Exploration Path</h2>
+            </div>
+            <p class="sidebar-count">0 items viewed</p>
+        </div>
+
+        <div class="sidebar-content">
+            <div class="sidebar-empty-state">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 3v18m9-9H3m15.36-6.36L5.64 18.36m12.72 0L5.64 5.64"/>
+                </svg>
+                <h3>Your Journey</h3>
+                <p>As you explore cards, we'll show your path and suggest related content</p>
+            </div>
+
+            <div class="history-timeline">
+                <!-- Timeline items will be added here dynamically -->
+            </div>
+        </div>
+    </aside>
+
+    <!-- Floating Action Button -->
+    <button class="fab">
+        <img src="assets/icon-add.svg" alt="Add" class="fab-icon">
+    </button>
+
+    <script src="script.js"></script>
+    <script src="dashboard-script.js"></script>
+    <script src="sidebar-script.js"></script>
+</body>
+</html>
